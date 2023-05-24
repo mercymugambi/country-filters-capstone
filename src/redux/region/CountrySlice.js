@@ -22,6 +22,7 @@ const CountrySlice = createSlice({
       .addCase(getCountries.fulfilled, (state, action) => {
         state.loading = false;
         state.countries = action.payload;
+        console.log(state.countries);
       })
       .addCase(getCountries.rejected, (state) => {
         state.loading = false;
