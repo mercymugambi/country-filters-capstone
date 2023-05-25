@@ -34,6 +34,7 @@ body {
  justify-content: center;
  align-items: center;
  flex: row;
+ width: 100%;
 }
 
 .tCountries {
@@ -42,11 +43,39 @@ body {
 
 .countries-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
 }
 
 .country-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #dd4680;
+}
+
+.flag-container {
+  /* height: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flag-image {
+  width: 80%;
+  height: 100%;
+}
+
+.country-card:nth-child(4n+1),
+.country-card:nth-child(4n+4) {
+  background-color: #db4680;
+}
+
+.country-card:nth-child(4n+2),
+.country-card:nth-child(4n+3) {
+  background-color: #cf4278;
 }
 
 @media screen and (min-width: 375px) and (max-width: 1440px) {

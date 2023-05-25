@@ -16,11 +16,9 @@ const Header = () => {
       <div className="mapSection">
         <img className="svg-container" src={africa} alt="africa" />
         <div className="totalCountries">
-          <h3 className="totalCountries">
-            <span className="tCountries">Total Countries</span>
-            <br />
-            <span className="main-text">{countries.length}</span>
-          </h3>
+          <span className="tCountries">Total Countries</span>
+          <br />
+          <span className="main-text">{countries.length}</span>
         </div>
       </div>
     </>
