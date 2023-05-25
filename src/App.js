@@ -1,21 +1,22 @@
+import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import './App.css';
+import Countries from './components/Countries';
 import { getCountries } from './redux/region/CountrySlice';
-import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCountries());
   }, [dispatch]);
+
   return (
-    <>
-      <Navigation />
+    <div className="App">
       <Routes>
-        <Route index path="/" element=< {<home />} />
+        <Route path="/" element={<Countries />} />
+        {/* <Route path="CountryDetails" element={<CountryDetails />} /> */}
       </Routes>
-    </>
+    </div>
   );
 }
 
