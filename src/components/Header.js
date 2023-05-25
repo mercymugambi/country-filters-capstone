@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { LeftIcon } from './icons';
+import africa from './assets/africa.png';
 
 const Header = () => (
   <>
@@ -8,6 +9,8 @@ const Header = () => (
       <h1 className="theme">African Countries Population Metrics</h1>
     </div>
     <div className="mapSection">
+      <img className="svg-container" src={africa} alt="world" />
+
       <div className="totalCountries">
         <h3>
           <span className="tCountries">Total Countries</span>

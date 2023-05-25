@@ -1,51 +1,45 @@
 body {
   background-color: aquamarine;
+  padding: 0%;
+  margin: 0%;
 }
 
-.header {
-  background-color: purple;
-  color: white;
+.navbar {
+  height: 80px;
+  background-color: #eb4b8a;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 10px;
+  justify-content:space-around;
 }
 
-.logo-container {
+.backIcon {
   display: flex;
-  align-items: center;
+  margin-left: 0%;
+  height: 36px;
+  width: 50px;
+  color: #fff;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+.theme {
+  color: #fff;
 }
 
-.logo-text {
-  font-size: 20px;
+.mapSection {
+  height: 10%;
+ background-color: #fc5192;
+ margin: auto;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
+.svg-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  body {
+    background-color: blue;
+  }
 }
-
-.nav-link {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.home-icon {
-  font-size: 20px;
-}
-
