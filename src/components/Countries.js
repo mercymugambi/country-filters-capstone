@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries } from '../redux/region/CountrySlice';
-import Navbar from './Header';
+import Header from './Header';
+import { RightIcon } from './icons';
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const Countries = () => {
   return (
     <div>
       <div>
-        <Navbar />
+        <Header />
       </div>
 
       {loading ? (
@@ -37,7 +38,10 @@ const Countries = () => {
                   <img className="flag-image" src={country.flags.png} alt={country.name.common} />
                 </div>
                 <h3>{country.name.common}</h3>
-                <p>{country.population}</p>
+                <div className="popSection">
+                  <p>{country.population}</p>
+                  <span className="righticon"><RightIcon /></span>
+                </div>
               </div>
             );
           })}

@@ -78,7 +78,21 @@ body {
   background-color: #cf4278;
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+.popSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.righticon {
+  display: flex;
+  margin-left: 30%;
+  height: 36px;
+  width: 50px;
+  color: #fff;
+}
+
+@media screen and (min-width: 376px) and (max-width: 1440px) {
   .countries-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
