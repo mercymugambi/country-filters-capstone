@@ -40,6 +40,15 @@ body {
   padding-right: 10px;
 }
 
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.country-card {
+  background-color: #dd4680;
+}
+
 @media screen and (min-width: 375px) and (max-width: 1440px) {
   body {
     background-color: blue;

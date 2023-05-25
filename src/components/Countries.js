@@ -11,7 +11,6 @@ const Countries = () => {
     dispatch(getCountries());
   }, [dispatch]);
 
-  // Create a mapping using Tid as the key
   const countryMapping = {};
   countries.forEach((country) => {
     countryMapping[country.tld] = country;
@@ -26,11 +25,11 @@ const Countries = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className="countries-grid">
           {Object.keys(countryMapping).map((tld) => {
             const country = countryMapping[tld];
             return (
-              <div key={country.tld}>
+              <div key={country.tld} className="country-card">
                 <h3>{country.name.common}</h3>
                 <p>
                   Official Name:
