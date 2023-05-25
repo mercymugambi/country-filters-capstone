@@ -56,11 +56,11 @@ body {
 }
 
 .flag-container {
-  /* height: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-top: 10px;
 }
 
 .flag-image {
@@ -79,7 +79,17 @@ body {
 }
 
 @media screen and (min-width: 375px) and (max-width: 1440px) {
-  body {
-    background-color: blue;
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .country-card:nth-child(even) {
+    background-color: #db4680;
+  }
+  
+  .country-card:nth-child(odd) {
+    background-color: #cf4278;
   }
 }

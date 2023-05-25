@@ -32,7 +32,6 @@ const Countries = () => {
               <div
                 key={country.tld}
                 className="country-card"
-                // style={{ backgroundImage: `url(${country.flags.png})` }}
               >
                 <div className="flag-container">
                   <img className="flag-image" src={country.flags.png} alt={country.name.common} />
