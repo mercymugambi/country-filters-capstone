@@ -8,10 +8,10 @@ export const getCountries = createAsyncThunk('countries/getCountries', async () 
   return data;
 });
 
-const CountrySlice = createSlice({
-  name: 'countries',
+const CountryDetailsSlice = createSlice({
+  name: 'details',
   initialState: {
-    countries: [],
+    details: [],
     loading: false,
   },
   extraReducers: (builder) => {
@@ -29,4 +29,4 @@ const CountrySlice = createSlice({
   },
 });
 
-export default CountrySlice.reducer;
+export default CountryDetailsSlice.reducer;
