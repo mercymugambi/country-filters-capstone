@@ -9,8 +9,7 @@ const Header = () => (
       <h1 className="theme">African Countries Population Metrics</h1>
     </div>
     <div className="mapSection">
-      <img className="svg-container" src={africa} alt="world" />
-
+      <img className="svg-container" src={africa} alt="africa" />
       <div className="totalCountries">
         <h3>
           <span className="tCountries">Total Countries</span>

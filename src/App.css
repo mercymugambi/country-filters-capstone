@@ -30,12 +30,14 @@ body {
   height: 10%;
  background-color: #fc5192;
  margin: auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex: row;
 }
 
-.svg-container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.tCountries {
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 375px) and (max-width: 1440px) {
