@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Header component correctly 1`] = `
+<div
+  class="navbar"
+>
+  <span
+    class="theme"
+  >
+    Population Metrics
+  </span>
+</div>
+`;
+
+exports[`renders Header component correctly 1`] = `
+<div
+  class="navbar"
+>
+  <span
+    class="theme"
+  >
+    Population Metrics
+  </span>
+</div>
+`;

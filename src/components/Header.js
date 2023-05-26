@@ -1,7 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import { NavLink } from 'react-router-dom';
-// import { LeftIcon } from './icons';
 import africa from './assets/africa.png';
 
 const Header = () => {
@@ -10,7 +8,6 @@ const Header = () => {
   return (
     <>
       <div className="navbar">
-        {/* <NavLink to="/" className="backIcon"><LeftIcon /></NavLink> */}
         <span className="theme">Population Metrics</span>
       </div>
       <div className="mapSection">
