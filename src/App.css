@@ -1,10 +1,12 @@
-body, html {
+body,
+html {
   background-color: #eb4b8a;
   padding: 0%;
   margin: 0%;
 }
 
-p, h3 {
+p,
+h3 {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -22,12 +24,13 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 10px;
 }
 
 .tCountries {
   color: #fff;
+  padding: 10px;
 }
 
 .main-text {
@@ -50,17 +53,12 @@ a {
 
 .mapSection {
   height: 10%;
- background-color: #fc5192;
- margin: auto;
- display: flex;
- justify-content: center;
- align-items: center;
- flex: row;
- width: 100%;
-}
-
-.tCountries {
-  padding-right: 10px;
+  background-color: #fc5192;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .countries-grid {
@@ -130,7 +128,6 @@ a {
   margin: 0;
 }
 
-
 .country {
   font-size: 20px;
   color: #fff;
@@ -163,10 +160,11 @@ a {
   .country-card-1:nth-child(even) {
     background-color: #db4680;
   }
-  
+
   .country-card-1:nth-child(odd) {
     background-color: #cf4278;
   }
+
   .flag-image-details {
     aspect-ratio: 1/1;
     margin: 0 auto;
@@ -174,5 +172,5 @@ a {
     left: 50%;
     right: 50%;
     transform: translate(-50%);
-}
+  }
 }
