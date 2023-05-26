@@ -18,6 +18,7 @@ const CountrySlice = createSlice({
   name: 'countries',
   initialState: {
     countries: [],
+    country: null,
     loading: false,
   },
   extraReducers: (builder) => {
