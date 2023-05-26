@@ -27,6 +27,13 @@ const Countries = () => {
       <div>
         <Header />
       </div>
+      <div className="search-container">
+        {' '}
+        <p className="search-Title">Search For Country</p>
+        {' '}
+        <input className="search-Input-Area" placeholder="e.g. Andorra" onChange={handleSearch} />
+        {' '}
+      </div>
 
       {loading ? (
         <p>Loading...</p>
@@ -37,13 +44,11 @@ const Countries = () => {
             return (
               <div key={country.tld} className="country-card-1">
                 <Link to={`/countries/${country.tld}`} className="country-card" onClick={() => handleCountryClick(country.tld)}>
-                  <div className="flag-container">
-                    <img className="flag-image" src={country.flags.png} alt={country.name.common} />
-                  </div>
-                  <h3>{country.name.common}</h3>
+                  <span className="righticon"><RightIcon /></span>
+                  <img className="flag-image" src={country.flags.png} alt={country.name.common} />
                   <div className="popSection">
                     <p>{country.population}</p>
-                    <span className="righticon"><RightIcon /></span>
+                    <h3>{country.name.common}</h3>
                   </div>
                 </Link>
               </div>

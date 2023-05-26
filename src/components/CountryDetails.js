@@ -24,29 +24,29 @@ const CountryDetails = () => {
         <div className="country-details">
           {country ? (
             <>
-              <div className="flag-container">
-                <img className="flag-image" src={country.flags.png} alt={country.name.common} />
+              <img className="flag-image-details" src={country.flags.png} alt={country.name.common} />
+              <div className="country">
+                <h2>
+                  Country:
+                  {' '}
+                  {country.name.common}
+                </h2>
               </div>
-              <h2>{country.name.common}</h2>
-              <p>
-                Capital:
-                {' '}
-                {country.capital}
+              <p className="data data1">
+                <span className="label">Capital City:</span>
+                <span>{country.capital}</span>
               </p>
-              <p>
-                Population:
-                {' '}
-                {country.population}
+              <p className="data data2">
+                <span className="label">Population:</span>
+                <span className="population-value">{country.population}</span>
               </p>
-              <p>
-                Region:
-                {' '}
-                {country.region}
+              <p className="data data1">
+                <span className="label">Region:</span>
+                <span>{country.region}</span>
               </p>
-              <p>
-                Subregion:
-                {' '}
-                {country.subregion}
+              <p className="data data2">
+                <span className="label">subregion:</span>
+                <span>{country.subregion}</span>
               </p>
             </>
           ) : (
