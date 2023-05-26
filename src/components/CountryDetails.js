@@ -1,42 +1,54 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { getCountryByTLD } from '../redux/region/CountrySlice';
+import { getCountries } from '../redux/region/CountrySlice';
 import Header from './Header';
-import { RightIcon } from './icons';
 
 const CountryDetails = () => {
-  const dispatch = useDispatch();
   const { tld } = useParams();
+  const dispatch = useDispatch();
+  const { countries, loading } = useSelector((state) => state.countries);
 
   useEffect(() => {
-    dispatch(getCountryByTLD(tld));
-  }, [dispatch, tld]);
+    dispatch(getCountries());
+  }, [dispatch]);
 
-  const country = useSelector((state) => state.countries.country);
+  const country = countries.find((country) => country.tld.includes(tld));
 
   return (
     <div>
-      <Header />
-      {country ? (
-        <div className="country-details">
-          <div className="flag-container">
-            <img className="flag-image" src={country.flags.png} alt={country.name.common} />
-          </div>
-          <h2>{country.name.common}</h2>
-          <div className="population-section">
-            <p>
-              Population:
-              {country.population}
-            </p>
-            <span className="right-icon">
-              <RightIcon />
-            </span>
-          </div>
-          {/* Render additional country details */}
-        </div>
-      ) : (
+      <div>
+        <Header />
+      </div>
+
+      {loading ? (
         <p>Loading...</p>
+      ) : (
+        <div className="country-details">
+          {country ? (
+            <>
+              <h2>{country.name.common}</h2>
+              <p>
+                Capital:
+                {country.capital}
+              </p>
+              <p>
+                Population:
+                {country.population}
+              </p>
+              <p>
+                Region:
+                {country.region}
+              </p>
+              <p>
+                Subregion:
+                {country.subregion}
+              </p>
+            </>
+          ) : (
+            <p>Country not found.</p>
+          )}
+        </div>
       )}
     </div>
   );

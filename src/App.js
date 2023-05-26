@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Countries />} />
-        <Route exact path="/countries/:tld" component={CountryDetails} />
+        <Route path="/countries/:tld" element={<CountryDetails />} />
       </Routes>
     </div>
   );

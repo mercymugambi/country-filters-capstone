@@ -18,6 +18,10 @@ const Countries = () => {
     countryMapping[country.tld] = country;
   });
 
+  const handleCountryClick = (tld) => {
+    console.log(`Clicked country with TLD: ${tld}`);
+  };
+
   return (
     <div>
       <div>
@@ -31,8 +35,8 @@ const Countries = () => {
           {Object.keys(countryMapping).map((tld) => {
             const country = countryMapping[tld];
             return (
-              <Link key={country.tld} to={`/countries/${country.tld}`} className="country-card-1">
-                <div className="country-card">
+              <div key={country.tld} className="country-card-1">
+                <Link to={`/countries/${country.tld}`} className="country-card" onClick={() => handleCountryClick(country.tld)}>
                   <div className="flag-container">
                     <img className="flag-image" src={country.flags.png} alt={country.name.common} />
                   </div>
@@ -41,8 +45,8 @@ const Countries = () => {
                     <p>{country.population}</p>
                     <span className="righticon"><RightIcon /></span>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             );
           })}
         </div>
