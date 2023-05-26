@@ -8,6 +8,12 @@ export const getCountries = createAsyncThunk('countries/getCountries', async () 
   return data;
 });
 
+export const getCountryByTLD = createAsyncThunk('countries/getCountryByTLD', async (tld) => {
+  const response = await fetch(`https://restcountries.com/v3.1/alpha/${tld}`);
+  const data = await response.json();
+  return data;
+});
+
 const CountrySlice = createSlice({
   name: 'countries',
   initialState: {
