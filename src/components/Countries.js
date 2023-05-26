@@ -31,7 +31,7 @@ const Countries = () => {
           {Object.keys(countryMapping).map((tld) => {
             const country = countryMapping[tld];
             return (
-              <Link key={country.tld} to={`/countries/${country.tld}`} className="country-card">
+              <Link key={country.tld} to={`/countries/${country.tld}`} className="country-card-1">
                 <div className="country-card">
                   <div className="flag-container">
                     <img className="flag-image" src={country.flags.png} alt={country.name.common} />

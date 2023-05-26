@@ -1,7 +1,9 @@
 body {
-  background-color: aquamarine;
+  background-color: #eb4b8a;
   padding: 0%;
   margin: 0%;
+  text-decoration: none;
+  list-style: none;
 }
 
 .navbar {
@@ -52,7 +54,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #dd4680;
+  list-style: none;
 }
 
 .flag-container {
@@ -68,13 +70,13 @@ body {
   height: 100%;
 }
 
-.country-card:nth-child(4n+1),
-.country-card:nth-child(4n+4) {
+.country-card-1:nth-child(4n+1),
+.country-card-1:nth-child(4n+4) {
   background-color: #db4680;
 }
 
-.country-card:nth-child(4n+2),
-.country-card:nth-child(4n+3) {
+.country-card-1:nth-child(4n+2),
+.country-card-1:nth-child(4n+3) {
   background-color: #cf4278;
 }
 
@@ -99,11 +101,11 @@ body {
     width: 100%;
   }
 
-  .country-card:nth-child(even) {
+  .country-card-1:nth-child(even) {
     background-color: #db4680;
   }
   
-  .country-card:nth-child(odd) {
+  .country-card-1:nth-child(odd) {
     background-color: #cf4278;
   }
 }

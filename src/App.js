@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Countries from './components/Countries';
 import { getCountries } from './redux/region/CountrySlice';
+import CountryDetails from './components/CountryDetails';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Countries />} />
-        {/* <Route path="CountryDetails" element={<CountryDetails />} /> */}
+        <Route exact path="/countries/:tld" component={CountryDetails} />
       </Routes>
     </div>
   );
