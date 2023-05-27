@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store Configuration return the correct reducer 1`] = `
+Object {
+  "countries": Array [],
+  "loading": false,
+}
+`;
+
+exports[`Store Configuration should have the correct reducer 1`] = `
+Object {
+  "countries": Array [],
+  "loading": false,
+}
+`;
