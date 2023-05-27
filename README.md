@@ -63,7 +63,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 > Below are important links to live project .
 - [Live Demo Link](https://country-filters-capstone.onrender.com)
-<!-- - [Loom Video Recording](https://www.loom.com/share/41e8dae1521649399c16a6f39d797cad) -->
+- [Loom Video Recording](https://www.loom.com/share/370eb6c017b84d708a37fd64fbea7162)
 
 
 <!-- GETTING STARTED -->
